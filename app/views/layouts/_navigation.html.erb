@@ -20,7 +20,7 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Actions<span class="caret dropbtn"></span></a>
             <ul class="dropdown-menu">
-              <li><%= link_to "New Article", new_article_path %></li>
+              <li><%= link_to "Create New Article", new_article_path %></li>
               <li><a href="#">Another action</a></li>
               <li><a href="#">Something else here</a></li>
               <li role="separator" class="divider"></li>
@@ -41,7 +41,7 @@
       <% if logged_in? %>
           <li><%= link_to 'Logout', logout_path, id: "menu-style", method: :delete %></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile Settings<%= "Admin" if current_user.admin? %><span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile Settings <%= "Admin" if current_user.admin? %><span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><%= link_to "Edit your profile", edit_user_path(current_user) %></li>
               <li><%= link_to "View your profile", user_path(current_user) %></li>
